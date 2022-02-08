@@ -1,0 +1,79 @@
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.mainBg {
+	background: radial-gradient(50% 50% at 50% 50%, rgba(113, 192, 198, 0.64) 0%, #71c0c6 77.02%);
+}
+
+.buttonBg {
+	background: #f3974e;
+}
+
+.missionBg {
+	background: #71c0c6;
+}
+
+.connectBg {
+	background: url(../images/connect.png) no-repeat center center;
+}
+
+.row-height-8 {
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flip-card {
+	background-color: transparent;
+	width: auto;
+	height: 100%;
+	perspective: 1000px;
+	border-radius: 14px;
+	overflow: hidden;
+
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/* text-align: center; */
+	transition: transform 0.6s;
+	transform-style: preserve-3d;
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+}
+
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+}
+
+
+.flip-card-front {
+	/* background-color: #bbb; */
+	color: black;
+	display: block;
+	height: 100%;
+}
+
+.flip-card-back {
+	background-color: #f3974e;
+	color: white;
+	transform: rotateY(180deg);
+	border-radius: 14px;
+	overflow: hidden;
+	display: none;
+	height: 100%;
+}
+
+.flip-card:hover .flip-card-back {
+	display: block;
+}
+
+.flip-card:hover .flip-card-front {
+	display: none;
+}
