@@ -51,9 +51,9 @@ function Footer() {
 								</Link>
 							</li>
 							<li>
-								<a className="text-white" to={"/catalog"}>
+								<Link className="text-white" to={"/catalog"}>
 									Catalog
-								</a>
+								</Link>
 							</li>
 							<li>
 								<Link className="text-white" to={"/partners"}>
