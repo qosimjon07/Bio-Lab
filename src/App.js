@@ -10,6 +10,7 @@ import BlogPage from "./pages/blog";
 import BlogDetailPage from "./pages/blogDetail";
 import ContactPage from "./pages/contact";
 import LoginPage from "./pages/login";
+import PartnersPage from "./pages/partners";
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 				<Route path="/blog/:id" element={<BlogDetailPage />} />
 				<Route path="/contact" element={<ContactPage />} />
 				<Route path="/login" element={<LoginPage />} />
+				<Route path="/partners" element={<PartnersPage />} />
 				<Route path="/catalog/Intraocular/:id" element={<CatalogIntraocularPage />} />
 				<Route path="/catalog/LensInjectors/:id" element={<CatalogLensInjectorsPage />} />
 				<Route path="/catalog/Viscoelastic/:id" element={<ViscoelasticGelsPage />} />

@@ -3,6 +3,7 @@ import Telegram from "../../images/telegram.png";
 import Instagram from "../../images/instagram.png";
 import Facebook from "../../images/facebook.png";
 import Youtube from "../../images/youtube.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
 	return (
@@ -10,22 +11,24 @@ function Footer() {
 			<div className="grid md:grid-cols-5 gap-5">
 				<div className="md:flex justify-around gap-5 col-span-2">
 					<div className="space-y-8">
-						<img className="h-8 w-auto sm:h-10" src={LogoImg} alt="logo" />
+						<Link to={"/"}>
+							<img className="h-8 w-auto sm:h-10" src={LogoImg} alt="logo" />
+						</Link>
 						<nav className="list-none text-lg space-y-8">
 							<li>
 								<div className="space-y-2">
 									<p className="text-white">We are in social networks</p>
 									<div className="flex space-x-3">
-										<a href="#">
+										<a href="https://www.facebook.com/">
 											<img className="h-6 w-auto" src={Facebook} alt="Facebook" />
 										</a>
-										<a href="#">
+										<a href="https://www.instagram.com/">
 											<img className="h-6 w-auto" src={Instagram} alt="Instagram" />
 										</a>
-										<a href="#">
+										<a href="https://web.telegram.org/k/">
 											<img className="h-6 w-auto" src={Telegram} alt="Telegram" />
 										</a>
-										<a href="#">
+										<a href="https://www.youtube.com/">
 											<img className="h-6 w-auto" src={Youtube} alt="Youtube" />
 										</a>
 									</div>
@@ -43,24 +46,24 @@ function Footer() {
 						<h2 className="title-font font-bold text-white tracking-widest text-xl mb-3">Sections</h2>
 						<nav className="list-none space-y-3 text-lg">
 							<li>
-								<a className="text-white" href="#">
+								<Link className="text-white" to={"/about"}>
 									About Us
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a className="text-white" href="#">
+								<a className="text-white" to={"/catalog"}>
 									Catalog
 								</a>
 							</li>
 							<li>
-								<a className="text-white" href="#">
+								<Link className="text-white" to={"/partners"}>
 									Partners
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a className="text-white" href="#">
+								<Link className="text-white" to={"/blog"}>
 									Blog
-								</a>
+								</Link>
 							</li>
 						</nav>
 					</div>
@@ -70,7 +73,9 @@ function Footer() {
 						<h2 className="title-font font-bold text-white tracking-widest text-xl mb-3">Addresses</h2>
 						<nav className="list-none space-y-2">
 							<li>
-								<a className="text-white" href="#">
+								<a
+									className="text-white"
+									href="https://goo.gl/maps/354KdUGeWhgZWWTy9">
 									<div className="flex space-x-3 items-start">
 										<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -84,7 +89,7 @@ function Footer() {
 								</a>
 							</li>
 							<li>
-								<a className="text-white" href="#">
+								<a className="text-white" href="https://goo.gl/maps/1pjVZXvtwsbjVpCV9">
 									<div className="flex space-x-3 items-start">
 										<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -98,7 +103,7 @@ function Footer() {
 								</a>
 							</li>
 							<li>
-								<a className="text-white" href="#">
+								<a className="text-white" href="https://goo.gl/maps/h4qjiTsEQrJQZKJDA">
 									<div className="flex space-x-3 items-start">
 										<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -117,7 +122,7 @@ function Footer() {
 						<h2 className="title-font font-bold text-white tracking-widest text-xl mb-3">Contacts</h2>
 						<nav className="list-none space-y-3">
 							<li>
-								<a className="text-white" href="#">
+								<a className="text-white" href="tel:+442080898343">
 									<div className="flex space-x-3 items-center">
 										<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 											<path
@@ -132,7 +137,7 @@ function Footer() {
 								</a>
 							</li>
 							<li>
-								<a className="text-white" href="#">
+								<a className="text-white" href="tel:+998951959195">
 									<div className="flex space-x-3 items-center">
 										<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 											<path
@@ -147,7 +152,7 @@ function Footer() {
 								</a>
 							</li>
 							<li>
-								<a className="text-white" href="#">
+								<a className="text-white" href="mailto:info@biolabgroups.com">
 									<div className="flex space-x-3 items-center">
 										<svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 											<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
