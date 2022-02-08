@@ -20,6 +20,7 @@ function ConnectBox() {
 	const onSubmit = (e) => {
 		e.preventDefault();
 
+		// input qiymatlari
 		// const nameInpValue = nameInp;
 		// const mailInpValue = mailInp;
 		// const massageInpValue = massageInp;
