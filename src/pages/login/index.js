@@ -2,26 +2,26 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
-    const [input, setInput] = useState('')
-    const [password, setpassword] = useState('')
-    const history = useNavigate()
+	const [input, setInput] = useState("");
+	const [password, setpassword] = useState("");
+	const history = useNavigate();
 
-    const onImailChange = (e) => {
-        setInput(e.target.value)
-    }
+	const onImailChange = (e) => {
+		setInput(e.target.value);
+	};
 
-    const onPasswordChange = (e) => {
-        setpassword(e.target.value)
-    }
+	const onPasswordChange = (e) => {
+		setpassword(e.target.value);
+	};
 
-    const onSubmit = (e) => {
-        e.preventDefault()
-        console.log(input);
-        console.log(password);
+	const onSubmit = (e) => {
+		e.preventDefault();
+		console.log(input);
+		console.log(password);
 
-        localStorage.setItem("mail", input);
-        history("/")
-    } 
+		localStorage.setItem("mail", input);
+		history("/");
+	};
 
 	return (
 		<div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
@@ -66,8 +66,8 @@ function LoginPage() {
 								</div>
 
 								<input
-                                    value={input}
-                                    onChange={onImailChange}
+									value={input}
+									onChange={onImailChange}
 									id="email"
 									type="email"
 									name="email"
@@ -109,8 +109,8 @@ function LoginPage() {
 								</div>
 
 								<input
-                                    value={password}
-                                    onChange={onPasswordChange}
+									value={password}
+									onChange={onPasswordChange}
 									id="password"
 									type="password"
 									name="password"
@@ -133,7 +133,7 @@ function LoginPage() {
 						<div className="flex w-full">
 							<button
 								type="submit"
-                                onClick={onSubmit}
+								onClick={onSubmit}
 								className="
                           flex
                           mt-2
@@ -164,7 +164,6 @@ function LoginPage() {
 			</div>
 			<div className="flex justify-center items-center mt-6">
 				<p
-					href="#"
 					target="_blank"
 					className="
                     inline-flex
@@ -175,7 +174,7 @@ function LoginPage() {
                   ">
 					<span className="ml-2">
 						You don't have an account?
-						<a href="#" className="text-xs ml-2 text-blue-500 font-semibold">
+						<a href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp" className="text-xs ml-2 text-blue-500 font-semibold">
 							Register now
 						</a>
 					</span>
