@@ -1,3 +1,5 @@
+/** @format */
+
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -18,21 +20,23 @@ function MainBlog() {
 	}, []);
 
 	return (
-		<div className="py-10">
+		<div className="desktop mb-120">
 			<div className="container">
-				<div className="w-16 border-b-2 border-orange-500"></div>
-				<p className="text-4xl font-medium mb-5">Blog</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+				<div className="titleTop"></div>
+				<p className="Title">Blog</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mainCatalog">
 					{data.length > 0 &&
 						data.map((question, index) => {
-							if(index < 3) {
+							if (index < 3) {
 								return <BlogCard key={question.id} question={question} />;
 							}
 						})}
 				</div>
-				<Link to={"/blog"} className="flex w-full justify-center mt-5">
-					<button className="text-lg shadow mt-3 px-8 py-1 rounded-full buttonBg text-white">All products</button>
-				</Link>
+				<div className="flex w-full justify-center">
+					<Link to={"/blog"}>
+						<button className="mainCatalogButton buttonBg">All products</button>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

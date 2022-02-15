@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import CatalogImg from "../../images/catalogImg.png";
 
 function IntraoculargCard({ question }) {
 	return (
@@ -6,17 +7,17 @@ function IntraoculargCard({ question }) {
 			<div className="flip-card">
 				<div className="flip-card-inner">
 					<div className="flip-card-front">
-						<div className="w-full rounded-xl border border-gray-200 p-3 space-y-2 text-center">
-							<div className="w-full rounded-xl overflow-hidden">
-								<img className="w-full object-cover" src={question.imgURL} alt="sertificate" />
+						<div className="">
+							<div className="front-card-img">
+								<img className="w-full object-cover" src={CatalogImg} alt="sertificate" />
 							</div>
-							<p className="text-gray-700 leading-5">{question.name}</p>
+							<p className="front-card-text">{question.name}</p>
 						</div>
 					</div>
 					<div className="flip-card-back">
-						<div className="w-full h-full rounded-xl border border-gray-200 p-3 space-y-2 flex flex-col justify-between">
-							<p className="row-height-8 bg-red">{question.title}</p>
-							<p className="text-gray-700 leading-5 underline text-white">Read more</p>
+						<div className="w-full h-full flex flex-col justify-between">
+							<p className="row-height-8 flip-card-text">{question.title}</p>
+							<p className="flip-card-more_text">Read more</p>
 						</div>
 					</div>
 				</div>
@@ -33,17 +34,17 @@ export function InjectorsCard({ question }) {
 			<div className="flip-card">
 				<div className="flip-card-inner">
 					<div className="flip-card-front">
-						<div className="w-full rounded-xl border border-gray-200 p-3 space-y-2 text-center">
-							<div className="w-full rounded-xl overflow-hidden">
+						<div className="">
+							<div className="front-card-img">
 								<img className="w-full object-cover" src={question.imgURL} alt="sertificate" />
 							</div>
-							<p className="text-gray-700 leading-5">{question.name}</p>
+							<p className="front-card-text">{question.name}</p>
 						</div>
 					</div>
 					<div className="flip-card-back">
-						<div className="w-full h-full rounded-xl border border-gray-200 p-3 space-y-2 flex flex-col justify-between">
-							<p className="row-height-8 bg-red">{question.title}</p>
-							<p className="text-gray-700 leading-5 underline text-white">Read more</p>
+						<div className="w-full h-full flex flex-col justify-between">
+							<p className="row-height-8 flip-card-text">{question.title}</p>
+							<p className="flip-card-more_text">Read more</p>
 						</div>
 					</div>
 				</div>
@@ -58,17 +59,17 @@ export function ViscoelasticCard({ question }) {
 			<div className="flip-card">
 				<div className="flip-card-inner">
 					<div className="flip-card-front">
-						<div className="w-full rounded-xl border border-gray-200 p-3 space-y-2 text-center">
-							<div className="w-full rounded-xl overflow-hidden">
+						<div className="">
+							<div className="front-card-img">
 								<img className="w-full object-cover" src={question.imgURL} alt="sertificate" />
 							</div>
-							<p className="text-gray-700 leading-5">{question.name}</p>
+							<p className="front-card-text">{question.name}</p>
 						</div>
 					</div>
 					<div className="flip-card-back">
-						<div className="w-full h-full rounded-xl border border-gray-200 p-3 space-y-2 flex flex-col justify-between">
-							<p className="row-height-8 bg-red">{question.title}</p>
-							<p className="text-gray-700 leading-5 underline text-white">Read more</p>
+						<div className="w-full h-full flex flex-col justify-between">
+							<p className="row-height-8 flip-card-text">{question.title}</p>
+							<p className="flip-card-more_text">Read more</p>
 						</div>
 					</div>
 				</div>
@@ -83,17 +84,17 @@ export function SuturesCard({ question }) {
 			<div className="flip-card">
 				<div className="flip-card-inner">
 					<div className="flip-card-front">
-						<div className="w-full rounded-xl border border-gray-200 p-3 space-y-2 text-center">
-							<div className="w-full rounded-xl overflow-hidden">
+						<div className="">
+							<div className="front-card-img">
 								<img className="w-full object-cover" src={question.imgURL} alt="sertificate" />
 							</div>
-							<p className="text-gray-700 leading-5">{question.name}</p>
+							<p className="front-card-text">{question.name}</p>
 						</div>
 					</div>
 					<div className="flip-card-back">
-						<div className="w-full h-full rounded-xl border border-gray-200 p-3 space-y-2 flex flex-col justify-between">
-							<p className="row-height-8 bg-red">{question.title}</p>
-							<p className="text-gray-700 leading-5 underline text-white">Read more</p>
+						<div className="w-full h-full flex flex-col justify-between">
+							<p className="row-height-8 flip-card-text">{question.title}</p>
+							<p className="flip-card-more_text">Read more</p>
 						</div>
 					</div>
 				</div>

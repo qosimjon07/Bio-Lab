@@ -32,13 +32,13 @@ export default CatalogLensInjectorsPage;
 function IdCard({ data }) {
 	return (
 		<div>
-			<div className="container">
-				<div className="grid w-full grid-cols-1 md:grid-cols-7 gap-3 py-10">
-					<img className="md:col-span-3 w-full rounded-3xl overflow-hidden border border-gray-200" src={data.imgURL} alt={data.name} />
-					<div className="w-full md:col-span-4 space-y-2">
-						<p className="text-4xl font-semibold mb-6">{data.name}</p>
-						<p className="text-xl">{data.name}</p>
-						<p>{data.title}</p>
+			<div className="container mb-120">
+				<div className="grid w-full grid-cols-1 md:grid-cols-5 detail-card-box">
+					<img className="md:col-span-2 detail-card-img" src={data.imgURL} alt={data.name} />
+					<div className="w-full md:col-span-3">
+						<p className="detail-card-name">{data.name}</p>
+						<p className="detail-card-title">{data.name}</p>
+						<p className="detail-card-text">{data.title}</p>
 					</div>
 				</div>
 			</div>

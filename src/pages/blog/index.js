@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Layout from "../../components/layout";
 import BlogCard from "../../components/layout/blogCard";
+import "../../css/main.css"
+import "../../css/blog.css"
 
 function BlogPage() {
 	return (
@@ -28,11 +30,11 @@ function MainSection() {
 	}, []);
 
 	return (
-		<div className="py-10">
+		<div className="desktop mb-120">
 			<div className="container">
-				<div className="w-16 border-b-2 border-orange-500"></div>
-				<p className="text-4xl font-medium mb-5">Blog</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+				<div className="titleTop"></div>
+				<p className="Title">Blog</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mainCatalog">
 					{data.length > 0 &&
 						data.map((question) => {
 							return <BlogCard key={question.id} question={question} />;

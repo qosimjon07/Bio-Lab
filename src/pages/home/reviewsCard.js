@@ -1,8 +1,8 @@
 function ReviewsCard({question}) {
 	return (
-		<div className="w-full rounded-3xl border border-gray-200 p-5 space-y-3">
-			<div className="flex space-x-5 items-center">
-				<div className="w-20 h-20 rounded-full overflow-hidden">
+		<div className="Reviews-card">
+			<div className="profile-box">
+				<div className="profile-Img">
 					<img
 						className="w-full h-full object-cover"
 						src={question.imgURL}
@@ -10,11 +10,11 @@ function ReviewsCard({question}) {
 					/>
 				</div>
 				<div>
-					<p className="text-xl">{question.name}</p>
-					<p className="text-gray-700">{question.title}</p>
+					<p className="profile-name">{question.name}</p>
+					<p className="profile-title">{question.title}</p>
 				</div>
 			</div>
-			<p className="line-clamp-4">{question.reference}</p>
+			<p className="line-clamp-5 Reviews-card-text">{question.reference}</p>
 		</div>
 	);
 }

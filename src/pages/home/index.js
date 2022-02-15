@@ -1,6 +1,9 @@
+/** @format */
+
 import Layout from "../../components/layout";
 import Doctor1 from "../../images/doctor1.png";
 import "../../css/main.css";
+import "../../css/header.css";
 import ReviewsCard from "./reviewsCard";
 import ConnectBox from "../../components/layout/connect";
 import MainAbout from "./about";
@@ -29,36 +32,32 @@ export default HomePage;
 
 function MainSection() {
 	return (
-		<div className="mainBg">
-			<div className="container lg:grid lg:grid-cols-8">
-				<div className="lg:col-span-3 flex flex-col text-white justify-center py-10 lg:py-5">
-					<h1 className="text-5xl font-bold">
-						Partnership <br /> & Collaboration
-					</h1>
-					<p className="text-lg my-4">
+		<div className="mainBg desktop mb-120">
+			<div className="container mainSection xl:flex">
+				<div className="main-title-div py-10 lg:py-0">
+					<h1 className="main-title-div__title">Partnership & Collaboration</h1>
+					<p className="main-title-div__text">
 						BioLab group is open to prospective partnership with companies of different spheres and specialities. Our main goal is being market oriented and provide the best quality possible. Please,
 						contact us regarding further enquiries.
 					</p>
 					<div>
-						<button className="text-lg shadow mt-3 px-8 py-1 rounded-full buttonBg">Get Start</button>
+						<button className="main-title-div__button">Get Start</button>
 					</div>
 				</div>
-				<div className="lg:col-span-5 flex">
-					<div className="md:flex">
-						<img className="w-2/3 md:w-3/5 mx-auto md:h-auto" src={Doctor1} alt="doctor" />
-						<div className="flex md:flex-col text-white w-full gap-2 md:gap-10 lg:gap-0 lg:justify-between py-2">
-							<div className="border border-white rounded-2xl px-1 py-3 md:px-2 md:py-5 lg:px-4 lg:py-6">
-								<p className="text-4xl md:mb-1 lg:mb-2">45</p>
-								<p className="text-lg">state partners</p>
-							</div>
-							<div className="border border-white rounded-2xl px-1 py-3 md:px-2 md:py-5 lg:px-4 lg:py-6">
-								<p className="text-4xl md:mb-1 lg:mb-2">10000+</p>
-								<p className="text-lg">operations to our patients</p>
-							</div>
-							<div className="border border-white rounded-2xl px-1 py-3 md:px-2 md:py-5 lg:px-4 lg:py-6">
-								<p className="text-4xl md:mb-1 lg:mb-2">50000+</p>
-								<p className="text-lg">lenses were delivered to partner clinics</p>
-							</div>
+				<div className="main-img-box 2xl:flex">
+					<img className="main-img-box__img w-full mx-auto" src={Doctor1} alt="doctor" />
+					<div className="main-img-box__Div flex-col md:flex-row 2xl:flex-col justify-center mx-auto">
+						<div className="main-img-box__Div__div mx-auto">
+							<p className="main-img-box__Div__div-title">45</p>
+							<p className="main-img-box__Div__div-text">state partners</p>
+						</div>
+						<div className="main-img-box__Div__div mx-auto">
+							<p className="main-img-box__Div__div-title">10000+</p>
+							<p className="main-img-box__Div__div-text">operations to our patients</p>
+						</div>
+						<div className="main-img-box__Div__div mx-auto">
+							<p className="main-img-box__Div__div-title">50000+</p>
+							<p className="main-img-box__Div__div-text">lenses were delivered to partner clinics</p>
 						</div>
 					</div>
 				</div>
@@ -82,11 +81,11 @@ function ReviewsSection() {
 	}, []);
 
 	return (
-		<div className="py-10">
+		<div className="desktop mb-120">
 			<div className="container">
-				<div className="w-16 border-b-2 border-orange-500"></div>
-				<p className="text-4xl font-medium mb-5">Reviews</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+				<div className="titleTop"></div>
+				<p className="Title">Reviews</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mainCatalog">
 					{data.length > 0 &&
 						data.map((question, index) => {
 							return <ReviewsCard key={index} question={question} />;
@@ -99,13 +98,11 @@ function ReviewsSection() {
 
 function PartnersSection() {
 	return (
-		<div className="py-10">
+		<div className="desktop mb-120">
 			<div className="container">
-				<div className="w-16 border-b-2 border-orange-500"></div>
-				<p className="text-4xl font-medium mb-5">Our partners</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-
-				</div>
+				<div className="titleTop"></div>
+				<p className="Title">Our partners</p>
+				<div className="flex items-center justify-between"></div>
 			</div>
 		</div>
 	);

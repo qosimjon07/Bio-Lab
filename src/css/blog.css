@@ -1,0 +1,25 @@
+/** @format */
+
+.blog-detail-box {
+	max-width: 710px;
+	margin: 0 auto;
+}
+
+.blog-detail-name {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 30px;
+	color: #020105;
+	margin-bottom: 16px;
+}
+
+.blog-detail-text {
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 28px;
+	color: #020105;
+}

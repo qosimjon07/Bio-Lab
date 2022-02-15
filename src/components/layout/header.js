@@ -11,11 +11,13 @@ function Header() {
 	};
 
 	return (
-		<div className="relative bg-white">
-			<div className="max-w-7xl mx-auto container">
-				<div className="flex justify-between items-center border-b-2 border-gray-100 py-5 md:space-x-10">
-					<Logo />
-					<div className="md:hidden">
+		<div className="relative">
+			<div className="container">
+				<div className="Header">
+					<Link to={"/"} className="logo">
+						<img className="w-full h-full" src={LogoImg} alt="logo" />
+					</Link>
+					<div className="menuBtn">
 						<button
 							onClick={openMobileMenu}
 							type="button"
@@ -36,33 +38,3 @@ function Header() {
 }
 
 export default Header;
-
-function Logo() {
-	return (
-		<div className="flex justify-start">
-			<Link to={"/"}>
-				<span className="sr-only">Workflow</span>
-				<img className="h-8 w-auto sm:h-10" src={LogoImg} alt="logo" />
-			</Link>
-		</div>
-	);
-}
-
-export function SignButtons() {
-	return (
-		<div className="hidden lg:flex items-center space-x-3">
-			<Link to={"/login"} className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-				Sign in
-			</Link>
-			<Link
-				to={"/login"}
-				className="whitespace-nowrap inline-flex items-center justify-center px-4 py-1.5 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-				Sign up
-			</Link>
-		</div>
-	);
-}
-
-export function HeaderMail() {
-	return <div className="w-8 h-8 rounded-full bg-gray-400"></div>;
-}

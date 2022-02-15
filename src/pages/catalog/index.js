@@ -4,6 +4,8 @@ import Layout from "../../components/layout";
 import IntraoculargCard, { InjectorsCard, SuturesCard, ViscoelasticCard } from "../../components/layout/catalogCard";
 import ConnectBox from "../../components/layout/connect";
 import Malumot from "./malumot";
+import "../../css/main.css";
+import "../../css/catalog.css";
 
 function CatalogPage() {
 	return (
@@ -35,11 +37,11 @@ function MainSection() {
 	}, []);
 
 	return (
-		<div className="py-10">
+		<div className="desktop mb-120">
 			<div className="container">
-				<div className="w-16 border-b-2 border-orange-500"></div>
-				<p className="text-4xl font-medium mb-5">Intraocular Lenses</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+				<div className="titleTop"></div>
+				<p className="Title">Intraocular Lenses</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 mainCatalog">
 					{data.length > 0 &&
 						data.map((question) => {
 							return <IntraoculargCard key={question.id} question={question} />;
@@ -65,11 +67,11 @@ function InjectorsSection() {
 	}, []);
 
 	return (
-		<div className="py-10">
+		<div className="desktop mb-120">
 			<div className="container">
-				<div className="w-16 border-b-2 border-orange-500"></div>
-				<p className="text-4xl font-medium mb-5">Lens Injectors</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+				<div className="titleTop"></div>
+				<p className="Title">Lens Injectors</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 mainCatalog">
 					{data.length > 0 &&
 						data.map((question) => {
 							return <InjectorsCard key={question.id} question={question} />;
@@ -95,11 +97,11 @@ function GelsSection() {
 	}, []);
 
 	return (
-		<div className="py-10">
+		<div className="desktop mb-120">
 			<div className="container">
-				<div className="w-16 border-b-2 border-orange-500"></div>
-				<p className="text-4xl font-medium mb-5">Viscoelastic Gels</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+				<div className="titleTop"></div>
+				<p className="Title">Viscoelastic Gels</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 mainCatalog">
 					{data.length > 0 &&
 						data.map((question) => {
 							return <ViscoelasticCard key={question.id} question={question} />;
@@ -125,11 +127,11 @@ function SuturesSection() {
 	}, []);
 
 	return (
-		<div className="py-10">
+		<div className="desktop mb-120">
 			<div className="container">
-				<div className="w-16 border-b-2 border-orange-500"></div>
-				<p className="text-4xl font-medium mb-5">Sutures</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+				<div className="titleTop"></div>
+				<p className="Title">Sutures</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-4 mainCatalog">
 					{data.length > 0 &&
 						data.map((question) => {
 							return <SuturesCard key={question.id} question={question} />;

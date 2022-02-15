@@ -18,11 +18,11 @@ function MainCatalog() {
 	}, []);
 
 	return (
-		<div className="py-10">
+		<div className="desktop mb-120">
 			<div className="container">
-				<div className="w-16 border-b-2 border-orange-500"></div>
-				<p className="text-4xl font-medium mb-5">New products</p>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:grid-cols-6 gap-5">
+				<div className="titleTop"></div>
+				<p className="Title">New products</p>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 mainCatalog">
 					{data.length > 0 &&
 						data.map((question, index) => {
 							if (index < 4) {
@@ -30,9 +30,11 @@ function MainCatalog() {
 							}
 						})}
 				</div>
-				<Link to={"/catalog"} className="flex w-full justify-center mt-5">
-					<button className="text-lg shadow mt-3 px-8 py-1 rounded-full buttonBg text-white">All products</button>
-				</Link>
+				<div className="flex w-full justify-center">
+					<Link to={"/catalog"}>
+						<button className="mainCatalogButton buttonBg">All products</button>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

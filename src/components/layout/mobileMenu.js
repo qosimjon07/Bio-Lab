@@ -6,13 +6,13 @@ function MobileMenu({ setIsMobileMenu }) {
 		setIsMobileMenu(false);
 	};
 	return (
-		<div className="fixed overflow-auto inset-0 pl-2 z-50  transition transform origin-top-right md:hidden min-h-screen">
+		<div className="fixed overflow-auto inset-0 pl-2 z-50  transition transform origin-top-right min-h-screen mobileCloseMenu">
 			<div className="rounded-l-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50 min-h-screen">
 				<div className="py-5 px-5">
 					<div className="flex items-center justify-between">
-						<div>
+						<Link to={"/"}>
 							<img className="h-8 w-auto sm:h-10" src={LogoImg} alt="Workflow" />
-						</div>
+						</Link>
 						<div className="-mr-2">
 							<button
 								onClick={closeMobileMenu}
@@ -78,9 +78,6 @@ function MobileMenu({ setIsMobileMenu }) {
 				</div>
 				<div className="py-6 px-5">
 					<div>
-						<Link to={"/login"} className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-							Sign up
-						</Link>
 						<div className="mt-6 text-center flex space-x-1 justify-center text-base font-medium text-gray-500">
 							<p>Existing customer?</p>
 							<Link to={"/login"} className="text-indigo-600 hover:text-indigo-500">
