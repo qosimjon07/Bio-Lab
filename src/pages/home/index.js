@@ -2,6 +2,11 @@
 
 import Layout from "../../components/layout";
 import Doctor1 from "../../images/doctor1.png";
+import Partner1 from "../../images/image 10.png";
+import Partner2 from "../../images/image 11.png";
+import Partner3 from "../../images/image 12.png";
+import Partner4 from "../../images/image 13.png";
+import Partner5 from "../../images/image 14.png";
 import "../../css/main.css";
 import "../../css/header.css";
 import ReviewsCard from "./reviewsCard";
@@ -102,7 +107,13 @@ function PartnersSection() {
 			<div className="container">
 				<div className="titleTop"></div>
 				<p className="Title">Our partners</p>
-				<div className="flex items-center justify-between"></div>
+				<div className="flex items-center justify-center gap-5 lg:justify-between flex-wrap">
+					<img className="border rounded-lg" src={Partner1} alt="hamkor" />
+					<img className="border rounded-lg" src={Partner2} alt="hamkor" />
+					<img className="border rounded-lg" src={Partner3} alt="hamkor" />
+					<img className="border rounded-lg" src={Partner4} alt="hamkor" />
+					<img className="border rounded-lg" src={Partner5} alt="hamkor" />
+				</div>
 			</div>
 		</div>
 	);
